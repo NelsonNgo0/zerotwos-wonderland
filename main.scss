@@ -1,0 +1,232 @@
+@function multiple-box-shadow ($n){ //Setting multiple-box-shadow to use for the stars
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+  }
+
+  @return unquote($value)
+}
+
+$shadows-small: multiple-box-shadow(700); //Different sizes
+$shadows-medium: mulitple-box-shadow(200);
+$shadows-large: mulitple-box-shadow(100);
+
+//Setting the actual background to look like space
+html {
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.stars { //Different star size
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+}
+
+.stars::after{
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+}
+
+.stars2 { //Different star size
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+}
+
+.stars2::after{
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+}
+
+.stars3 { //Different star size
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-large;
+  animation: animStar 150s linear infinite;
+}
+
+.stars3::after{
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-large;
+}
+
+@keyframes animStar { //pushing it up the screen
+  from{
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+
+.background-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 25vh;
+    height: 50%;
+    padding-top: 15vh;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.background-wrapper h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    width: 100%;
+}
+
+.center {
+    width: 1000px;
+    height: 250px;
+    position: absolute;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center h1 {
+    font-size: 6em;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.btnWrapper {
+    width: auto;
+    height: auto;
+    top: 60%;
+    position:relative;
+    justify-content: center;
+}
+
+.FindMebutton {
+    justify-content: center;
+    align-items: center;
+}
+
+.FindMebutton a{
+    background: #6da0cd;
+  border-radius: 999px;
+  box-shadow: #6da0cd 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+
+  text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .resumePOP {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .resumePOP h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: 'Oxygen', sans-serif;
+  }
+  .resumePOP .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .resumePOP .close:hover {
+    color: #06D85F;
+  }
+  .resumePOP .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 900px){
+    .resumePOP{
+      width: 70%;
+    }
+  }
