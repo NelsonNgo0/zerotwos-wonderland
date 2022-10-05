@@ -199,7 +199,7 @@ html {
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 66%;
     position: relative;
     transition: all 5s ease-in-out;
   }
@@ -232,3 +232,15 @@ html {
       width: 70%;
     }
   }
+
+.content{
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 20px;
+  width: 75%;
+  height: 1000px;
+}
+.content p {
+  font-family: 'Oxygen', sans-serif;
+
+}
