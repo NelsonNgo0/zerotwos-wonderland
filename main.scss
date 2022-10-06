@@ -195,11 +195,12 @@ html {
   }
   
   .resumePOP {
-    margin: 70px auto;
+    margin: 3% auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     width: 66%;
+    height: 85%;
     position: relative;
     transition: all 5s ease-in-out;
   }
@@ -220,10 +221,10 @@ html {
     color: #333;
   }
   .resumePOP .close:hover {
-    color: #06D85F;
+    color: #91c6f4;
   }
   .resumePOP .content {
-    max-height: 30%;
+    max-height: 50%;
     overflow: auto;
   }
   
@@ -238,9 +239,8 @@ html {
   margin-top: 6px;
   margin-left: 20px;
   width: 75%;
-  height: 1000px;
+  height: 750px;
 }
 .content p {
   font-family: 'Oxygen', sans-serif;
-
 }
