@@ -206,11 +206,6 @@ html {
     display: flex,
   }
   
-  .resumePOP h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: 'Oxygen', sans-serif;
-  }
   .resumePOP .close {
     position: absolute;
     top: 20px;
@@ -225,7 +220,7 @@ html {
     color: #91c6f4;
   }
   .resumePOP .content {
-    max-height: 50%;
+    max-height: 100%;
     overflow: auto;
   }
   
@@ -236,12 +231,11 @@ html {
   }
 
 .content{
-  display: grid;
+  display: flex;
   margin-top: 6px;
   margin-left: 20px;
   width: 100%;
   height: 750px;
-  grid-template-columns: 2fr 4fr;
 }
 .content p {
   font-family: 'Oxygen', sans-serif;
@@ -270,4 +264,43 @@ html {
 .rightResume p {
   font-size: 1em;
 
+}
+
+.profimg {
+  justify-content: center;
+}
+
+.contact p{
+  width: auto;
+  padding: 3%;
+  font-size: 0.5em;
+  opacity: 0.7;
+}
+
+.skills {
+  display: inline-block;
+  white-space: normal;
+}
+
+.RL {
+  display: flex;
+  flex-direction: column;
+}
+
+.RR {
+  //need to pad the left side a bit
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.RR h2{
+  font-size: 3em;
+  margin-bottom: 0;
+  color: #333;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.RR h5{
+  margin-top: 0;
+  font-family: 'Oxygen', sans-serif;
 }
