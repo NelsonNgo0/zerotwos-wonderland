@@ -285,12 +285,14 @@ html {
 .RL {
   display: flex;
   flex-direction: column;
+
+  font-family: 'Oxygen', sans-serif;
 }
 
 .RR {
   //need to pad the left side a bit
-  margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 
 .RR h2{
@@ -302,5 +304,13 @@ html {
 
 .RR h5{
   margin-top: 0;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.RR h3{
+  font-family: 'Oxygen', sans-serif;
+}
+
+.dl dt {
   font-family: 'Oxygen', sans-serif;
 }
