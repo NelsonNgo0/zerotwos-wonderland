@@ -287,12 +287,12 @@ html {
 .RL {
   display: flex;
   flex-direction: column;
-
   font-family: 'Oxygen', sans-serif;
 }
 
 .RR {
   //need to pad the left side a bit
+  padding-left: 10px;
   margin-right: auto;
   flex-direction: column;
 }
@@ -315,4 +315,14 @@ html {
 
 .dl dt {
   font-family: 'Oxygen', sans-serif;
+}
+
+.RR a {
+  text-decoration: none;
+  color: #1338BE;
+}
+
+.RR a:visited { 
+  text-decoration: none;
+  color: #1338BE;
 }
