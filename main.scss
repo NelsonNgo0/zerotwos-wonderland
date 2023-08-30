@@ -346,8 +346,9 @@ html {
 }
 
 
-.content {
+.Rcontent {
   max-width: 800px;
+  margin: 0;
 }
 
 section{
@@ -360,6 +361,7 @@ section{
   scroll-snap-align: start;
 }
 
+//bg coolour for troubleshooting
 .Summary{
   background-color: red;
 }
