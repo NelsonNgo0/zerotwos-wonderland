@@ -221,7 +221,7 @@ html {
   }
   .resumePOP .content {
     max-height: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
   
   @media screen and (max-width: 900px){
@@ -238,6 +238,20 @@ html {
   height: 750px;
 }
 .content p {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.content h1 {
+  display: flex;
+  width: 100%;
+  height: 750px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3em;
+  font-weight: 500;
+  margin: 0;
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -325,4 +339,15 @@ html {
 .RR a:visited { 
   text-decoration: none;
   color: #1338BE;
+}
+
+.resumeCenter {
+  position: relative;
+  max-width: 100%;
+  max-height: 750px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
 }
